@@ -3,6 +3,19 @@
 
 using namespace std;
 
+bool check_prime(int a){
+        int f=0;
+        for (int i = 2; i <= sqrt(a); i++)
+        {
+            if (a%i==0)
+            {       
+                return false;
+            }
+            
+        }
+        return true;
+    }
+
 int main()
 {
     #ifndef ONLINE_JUDGE
@@ -11,19 +24,18 @@ int main()
     #endif
 
     
-    int n;
-    int r = 0;
-    cin>>n;
-    while (n>0)
+    int a,b;
+    cin>>a>>b;
+    for (int i = a; i <= b; i++)
     {
-        int m = n%10;
-        n = (n-m)/10;
-        r = (r*10)+m;
+        if (check_prime(i))
+        {
+            cout<<i<<endl;
+        }
+        
     }
-    cout<<r;
+
     
     
-    
-    //sudarshan
     return 0;
 }
