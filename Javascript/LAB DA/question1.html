@@ -2,64 +2,99 @@
 <html>
 
 <head>
-    <title>Form </title>
+
+    
+  
+    <script type="text/javascript">
+        function validate() {
+  
+            var user = document.getElementById("c").value;
+            var user2 = document.getElementById("c");
+            var re = /^[7-9][0-9]{9}$/;
+            if (re.test(user)) {
+                alert("done");
+                return true;
+            }
+            else {
+  
+                
+                return false;
+            }
+        }
+    </script>
 </head>
-
+  
 <body>
-    <form action="POST">
-        <h1>Job Application </h1>
-        <div class="w3-bar">
-            <div class="w3-blue">
-                <h3>Personal Information</h3>
-            </div>
-        </div>
-        <br>
-        Full Name:<input type="text"><br>
-        <br>
-        Email: <input type="text">
-        <br>
-        Gender: <input type="radio" , id="gender_1" , name="gender" , value="Male">
-        <label for="gender_1">Male</label><br>
-        <input type="radio" , id="gender_2" , name="gender" , value="Male">
-        <label for="gender_2">Female</label><br>
-        <br>
-        <div class="w3-bar">
-            <div class="w3-blue">
-                <h3>Previous Education</h3>
-            </div>
-        </div>
-        College/University <input type="text"><br>
-        <label for="maj">Major:</label>
-
-        <select name="major" id="major">
-            <option value="comp_science">Computer Science</option>
-            <option value="info_system">Information System</option>
-            <option value="info_science">Information Science</option>
-            <option value="Comp_eng">Computer Engineering</option>
-        </select>
-        <br>
-        Upload your transcript and certificate:
-        <input type="file" id="myFile" name="filename">
-        <p>maximum size of 700k PDF</p>
-        bio: <div style="width:200px;height:100px;border:1px solid #000;"></div>
-        <br>
-        <div class="w3-bar">
-            <div class="w3-blue">
-                <h3>CHECK ALL PROGRAMMING LANGUAGE YOU KNOW</h3>
-            </div>
-        </div>
-        <input type="checkbox" id="htmlCSS" name="htmlCSS" value="htmlCSS">
-        <label for="htmlCSS"> HTML and CSS</label><br>
-        <input type="checkbox" id="python" name="python" value="python">
-        <label for="python"> Python</label><br>
-        <input type="checkbox" id="java" name="java" value="java">
-        <label for="java"> java</label><br>
-        <input type="checkbox" id="cpp" name="cpp" value="cp">
-        <label for="cpp"> C++</label><br>
-        <input type="submit" ,value="Submit" ,
-            style="font-size:10pt;color:black;background-color:yellow;border:0px solid #336600;padding:3px">
-    </form>
+    <center>
+    <h1> IT FIRM</h1>
+    </center>
+     
+        <form>
+            
+                <h3>Application Form</h3> 
+                <br>
+                <table>
+                    <tr>
+                        <input type="text" placeholder="firstname" maxlength="10">
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <input type="text"  placeholder="lastname" maxlength="10">
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <input type="email"  placeholder="username@gmail.com">
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <input type="password" placeholder="password">
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <input type="password" placeholder="confirm">
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <input type="text" placeholder="contact" id="c">
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <label>Gender:</label>
+                        <select id="gender">
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                            <option value="others">others</option>
+                        </select>
+                    </tr>
+                    <br><br>
+                    <tr>
+                    <label> Are you willing to relocate if needed?</label>
+                    <br>
+                    <input type="radio" id="relocate1" name="relocate">
+                    <label for="relocate1"> Yes</label><br>
+                    <input type="radio" id="relocate2" name="relocate">
+                   <label for="relocate2"> No</label>
+                    <br><br>
+                    <tr>
+                    <label> Programming languages known: (Check all that are vaild)</label><br>
+                    <input type="checkbox" id="htmlcss" name="htmlcss">
+                    <label for="htmlcss"> HTML & CSS</label><br>
+                    <input type="checkbox" id="python" name="python">
+                    <label for="python"> Python</label><br>
+                    <input type="checkbox" id="java" name="java">
+                    <label for="java"> JAVA</label><br>
+                    <input type="checkbox" id="C" name="C">
+                    <label for="C"> C/C++</label><br>
+                    <br>
+                    <tr>
+                    <label> Upload Resume:</label><br><br>
+                    <input type="file" id="myFile" name="filename">
+                    <br><br>
+                        <input type="Submit" onclick="validate()" value="Submit">
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+   
 </body>
-</body>
-
 </html>
