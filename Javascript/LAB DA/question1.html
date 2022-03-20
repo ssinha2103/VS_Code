@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form </title>
+</head>
+
+<body>
+    <form action="POST">
+        <h1>Job Application </h1>
+        <div class="w3-bar">
+            <div class="w3-blue">
+                <h3>Personal Information</h3>
+            </div>
+        </div>
+        <br>
+        Full Name:<input type="text"><br>
+        <br>
+        Email: <input type="text">
+        <br>
+        Gender: <input type="radio" , id="gender_1" , name="gender" , value="Male">
+        <label for="gender_1">Male</label><br>
+        <input type="radio" , id="gender_2" , name="gender" , value="Male">
+        <label for="gender_2">Female</label><br>
+        <br>
+        <div class="w3-bar">
+            <div class="w3-blue">
+                <h3>Previous Education</h3>
+            </div>
+        </div>
+        College/University <input type="text"><br>
+        <label for="maj">Major:</label>
+
+        <select name="major" id="major">
+            <option value="comp_science">Computer Science</option>
+            <option value="info_system">Information System</option>
+            <option value="info_science">Information Science</option>
+            <option value="Comp_eng">Computer Engineering</option>
+        </select>
+        <br>
+        Upload your transcript and certificate:
+        <input type="file" id="myFile" name="filename">
+        <p>maximum size of 700k PDF</p>
+        bio: <div style="width:200px;height:100px;border:1px solid #000;"></div>
+        <br>
+        <div class="w3-bar">
+            <div class="w3-blue">
+                <h3>CHECK ALL PROGRAMMING LANGUAGE YOU KNOW</h3>
+            </div>
+        </div>
+        <input type="checkbox" id="htmlCSS" name="htmlCSS" value="htmlCSS">
+        <label for="htmlCSS"> HTML and CSS</label><br>
+        <input type="checkbox" id="python" name="python" value="python">
+        <label for="python"> Python</label><br>
+        <input type="checkbox" id="java" name="java" value="java">
+        <label for="java"> java</label><br>
+        <input type="checkbox" id="cpp" name="cpp" value="cp">
+        <label for="cpp"> C++</label><br>
+        <input type="submit" ,value="Submit" ,
+            style="font-size:10pt;color:black;background-color:yellow;border:0px solid #336600;padding:3px">
+    </form>
+</body>
+</body>
+
+</html>

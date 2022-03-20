@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #container>div{
+            position: relative;
+            width: 200px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+        #click{
+            background-color: skyblue;
+        }
+        #hover{
+            background-color: gray;
+        }
+        #dblclick{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id = "container">
+        <div id = "click" onclick = "clickFunc()">click</div>
+        <div id = "hover" onmouseover = "hoverFunc()">hover</div>
+        <div id = "dblclick" ondblclick="dblClickFunc()">double click</div>
+    </div>
+</body>
+<script>
+    function clickFunc(){
+        let x = document.getElementById("click");
+        let id = null;
+        let shift = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+            if (shift == 100) {
+                x.style.left=0;
+                clearInterval(id);
+            } else {
+                shift++; 
+                x.style.left = shift + "px";
+            }
+        }
+    }
+    
+    function hoverFunc(){
+        let x = document.getElementById("hover");
+        let id = null;
+        let shift = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+            if (shift == 100) {
+                x.style.right=0;
+                clearInterval(id);
+            } else {
+                shift++; 
+                x.style.right = shift + "px";
+            }
+        }
+    }
+
+    function dblClickFunc(){
+        let x = document.getElementById("dblclick");
+        let id = null;
+        let shift = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+            if (shift == 100) {
+                x.style.top=0;
+                clearInterval(id);
+            } else {
+                shift++; 
+                x.style.top = shift + "px";
+            }
+        }
+    }
+</script>
+</html>
